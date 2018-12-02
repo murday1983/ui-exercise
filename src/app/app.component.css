@@ -1,0 +1,109 @@
+mat-sidenav {
+    opacity: 0.6;
+}
+
+mat-nav-list {
+    font-weight: 800;
+}
+
+.mat-list-option:hover,
+.mat-nav-list .mat-list-item:hover {
+    background-color: #607d8b;
+}
+
+a.mat-list-item {
+    border-bottom: 1px solid darkgray;
+}
+
+.mat-list-base {
+    padding-top: 0px;
+}
+
+h5 {
+    font-weight: 800;
+}
+
+i {
+    font-size: 2rem;
+}
+
+p {
+    margin-right: 5rem;
+}
+
+.menu-spacer {
+    flex: 1 1 auto;
+  }
+
+.headerTitle {
+    font-weight: 900;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.headerTitle {
+    color: #fff;
+}
+
+.titleSecondLine {
+    margin-left: 3.5rem;
+    font-style: italic;
+}
+
+a.desktopMenu {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+a.desktopMenu:hover,
+a.desktopMenu:focus {
+    color: darkred;
+    border-bottom: 2px solid darkred;
+}
+
+a.desktopMenu.active {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    background-color: lightgrey;
+}
+ 
+.show-scroll {
+    opacity: 0.6;
+    transition: all .2s ease-in-out;
+}
+  
+  @media screen and (min-width: 800px) {
+    mat-sidenav {
+        width: 30%;
+        opacity: 1;
+    }
+
+    .mat-drawer-backdrop.mat-drawer-shown {
+        visibility: hidden;
+    }
+}
+
+.submenu {
+    overflow-y: hidden;
+    transition: 300ms ease-in-out;
+    height: 0;
+  }
+
+  .submenu.expanded {
+    height: 144px;
+  }
+
+  .subMenuIcon{
+      margin-left: 5px;
+      font-weight: 900;
+  }

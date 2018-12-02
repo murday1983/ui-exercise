@@ -1,0 +1,137 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <a routerLink="/" class="headerTitle">
+            Antony's
+            <br />
+            <span class="titleSecondLine">UI Test</span>
+        </a>
+        <span class="menu-spacer"></span>
+        <!-- The following button is only displayed on SM & XS screen sizes -->
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+            <mat-icon style="width: 40px; font-size: 50px">menu</mat-icon>
+        </button>
+        <!-- The following button is only displayed on MD & above screen sizes -->
+        <div fxShow="true" fxHide.lt-md>
+            <a class="desktopMenu" routerLink="/aboutus" routerLinkActive="active" (click)="sidenav.close()">
+                About us
+            </a>
+            <a class="desktopMenu" routerLink="/ourblogs" routerLinkActive="active" (click)="sidenav.close()">
+                Our blogs
+            </a>
+            <a class="desktopMenu" style="cursor: pointer" (click)="sidenav.toggle()">
+                Side menu
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav position="end" [mode]="mode.value">
+        <!-- The following button is only displayed on MD & above screen sizes -->
+        <mat-nav-list id="desktopSideNav" fxShow="true" fxHide.lt-md>
+            <a mat-list-item routerLink="/aboutus" routerLinkActive="active" (click)="sidenav.toggle()">
+                Link 1
+            </a>
+            <a mat-list-item routerLink="/ourblogs" routerLinkActive="active" (click)="sidenav.toggle()">
+                Link 2
+            </a>
+            <a mat-list-item routerLink="/ourblogs" routerLinkActive="active" (click)="sidenav.toggle()">
+                Link 3
+            </a>
+        </mat-nav-list>
+
+        <!-- The following button is only displayed on SM & XS screen sizes -->
+        <mat-nav-list id="mobileSideNav" fxShow="true" fxHide.gt-sm>
+            <a mat-list-item routerLink="/aboutus" routerLinkActive="active" (click)="sidenav.toggle()">
+                About us
+            </a>
+            <a mat-list-item routerLink="/ourblogs" routerLinkActive="active" (click)="sidenav.toggle()">
+                Our blogs
+            </a>
+            <a mat-list-item (click)="showSubmenu = !showSubmenu">
+                Side menu<mat-icon class="subMenuIcon" [ngClass]="{'rotated' : showSubmenu}">expand_more</mat-icon>
+            </a>
+            <!-- Sub Menu -->
+            <div class="submenu" [ngClass]="{'expanded' : showSubmenu}">
+                <mat-list-item>Submenu Item 1</mat-list-item>
+                <mat-list-item>Submenu Item 2</mat-list-item>
+                <mat-list-item>Submenu Item 3</mat-list-item>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- Navigation to page -->
+        <router-outlet></router-outlet>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerContent" flLayout="column" fxLayoutGap="7px" fxLayoutGap.xs="0px">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="7px" fxLayoutGap.sm="0px">
+                    <!-- Information Column-->
+                    <div>
+                        <h5>Information</h5>
+                        <p>
+                            <a mat-list-item href="#top" routerLink="/aboutus">
+                                About us
+                            </a>
+                        </p>
+                        <p>
+                            <a mat-list-item routerLink="/ourblogs">
+                                Our blogs
+                            </a>
+                        </p>
+                        <p>
+                            <a routerLink="/">Press</a>
+                        </p>
+                        <p>
+                            <a routerLink="/">Terms and conditions</a>
+                        </p>
+                    </div>
+                    <!-- Help Column -->
+                    <div>
+                        <h5>Help</h5>
+                        <p>
+                            <a routerLink="/">Contact us</a>
+                        </p>
+                        <p>
+                            <a routerLink="/">Cookie policy</a>
+                        </p>
+                        <p>
+                            <a routerLink="/">Website use</a>
+                        </p>
+                    </div>
+                    <!-- Follow Column -->
+                    <div>
+                        <h5>Follow us on:</h5>
+                        <p>
+                            <a routerLink="/">
+                                <i class="fab fa-facebook-square" matTooltip="Facebook"></i>
+                            </a>
+                            &nbsp;
+                            <a routerLink="/">
+                                <i class="fab fa-twitter-square" matTooltip="Twitter"></i>
+                            </a>
+                            &nbsp;
+                            <a routerLink="/">
+                                <i class="fab fa-instagram" matTooltip="Instagram"></i>
+                            </a>
+                            &nbsp;
+                            <a routerLink="/">
+                                <i class="fab fa-youtube-square" matTooltip="Youtube"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to top button (Only displayed on SM & XS screen sizes)-->
+        <button mat-raised-button [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()" class="scroll-to-top"
+            fxShow="true" fxHide.gt-sm title="Back to top">
+            <i class="material-icons" title="Back to top">
+                keyboard_capslock
+            </i>
+        </button>
+    </mat-sidenav-content>
+</mat-sidenav-container>

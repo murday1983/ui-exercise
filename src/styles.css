@@ -1,0 +1,131 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    margin: 0px;
+}
+
+.mainContent {
+    margin: 0rem auto 5rem auto;
+    max-width: 60rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.footer {
+    background-color: #2e2d2d;
+    color: lightgrey;
+}
+
+.footerContent {
+    padding: 2rem 3rem 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 47rem;
+}
+
+.mat-card-image {
+    width: 100% !important;
+    margin: 0% !important;
+}
+
+.subContent {
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    border: .2rem solid gray;
+    color: #b32bed;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.subContentIconSpan {
+    float: left;
+    margin-right: 1rem;
+}
+
+.subContentIcon {
+    color: #fffd8a;
+    font-size: 47px
+}
+
+.mainCarousel {
+    height: 22rem;
+}
+
+.innerCarousel {
+    height: inherit;
+}
+
+.defaultButton {
+    background-color: lightsteelblue;
+}
+
+.defaultButton:hover {
+    background-color: #1e90ff;
+}
+
+.submitButton {
+    background-color: lightcyan;
+}
+
+.submitButton:hover {
+    background-color: #36a530;
+}
+
+mat-toolbar-row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem !important;
+}
+
+mat-card {
+    margin: 10px;
+    padding: 0px !important;
+}
+ 
+.colorCardHeader {
+    background: #607d8b;
+    color: #fff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+}
+
+mat-card-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Lubalin Graph Book';
+    font-size: 21px !important;
+    margin-bottom: 0px !important;
+}
+
+mat-card-content {
+    padding: 15px 15px 0px 15px;
+    margin-bottom: 16px !important;
+}
+
+mat-card-footer {
+    margin: 0px !important;
+    background-color: lightgray;
+    padding: 10px;
+    text-align: right;
+}
+
+.topPageBlock {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    margin: 0px;
+}
+
+.blueTopPageBlock {
+    background-color: lightblue;
+}
+
+.topPageBlockerWrapper {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
